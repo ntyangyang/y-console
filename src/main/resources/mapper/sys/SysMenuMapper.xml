@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.console.modules.sys.mapper.SysMenuMapper">
+
+    <select id="selectByUserId" resultType="com.console.modules.sys.model.SysMenu">
+        SELECT
+        *
+        FROM
+        sys_menu m
+        INNER JOIN sys_menu_role mr ON m.id = mr.menu_id AND mr.del_flag = 0
+        INNER JOIN sys_role r ON mr.role_id = r.id AND r.del_flag = 0
+        INNER JOIN sys_user_role ur ON ur.role_id = r.id AND ur.del_flag = 0
+        WHERE
+        ur.user_id = #{userId}
+        AND
+        m.status = 0
+        AND
+        m.del_flag = 0
+    </select>
+
+</mapper>

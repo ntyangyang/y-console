@@ -1,0 +1,30 @@
+spring:
+  # 环境 dev|test|prod
+  profiles:
+    active: dev
+  # jackson 时间格式化
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    # 文件大小上传配置
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+# 配置文件加密key
+jasypt:
+  encryptor:
+    password: yang
+
+# Swagger界面内容配置
+swagger:
+  title: Y-console API接口文档
+  description: Y-console Api Documentation
+  version: 1.0.0
+  termsOfServiceUrl: https://github.com/ntyangyang
+  contact:
+    name: Yang
+    url: https://github.com/ntyangyang
+    email: 472919997@qq.com
