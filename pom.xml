@@ -35,7 +35,7 @@
         <commons.io.version>2.5</commons.io.version>
         <commons.codec.version>1.10</commons.codec.version>
         <commons.configuration.version>1.10</commons.configuration.version>
-        <hutool.version>4.1.1</hutool.version>
+        <hutool.version>4.1.12</hutool.version>
         <lombok.version>1.16.20</lombok.version>
         <jasypt.version>1.18</jasypt.version>
     </properties>
